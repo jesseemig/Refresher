@@ -1,0 +1,34 @@
+body {
+    font-family: sans-serif;
+    color: #473004;
+}
+.hey {
+    font-size: 350%;
+    text-align: center;
+}
+p {
+    text-align: center;
+}
+form {
+    text-align: left;
+}
+.input {
+    text-align: center;
+}
+b {
+    font-size: 110%;
+}
+
+.nameSection {
+    width: 50%;
+    float: left;
+}
+
+.dictionaryTitle {
+    text-align: center
+}
+
+.numInfo {
+    width: 50%;
+    float: right;
+}
