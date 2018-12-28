@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html lang="en" ng-app="MyApp">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="styles.css"/>
+</head>
+
+<body ng-controller="MainController">
+    <h2 class="hey">Demonstration</h2>
+    <p>First name will appear in the First Name field below. Last name will be displayed backwards. <br>
+        Hopefully the words API will work. </p>
+
+    <div class="nameSection">
+    <form>
+        First name:<br>
+        <input type="text" ng-model="first"><br>
+        Last name:<br>
+        <input type="text" ng-model="last">
+        <br>
+        <br>
+        <button type="button" class="btn addBtn" ng-click="srchBtn()">Search</button>
+    </form>
+    <div>
+        <h3>First Name: {{ one }}
+            <br>
+            <br>
+            Last Name (backwards): {{ two }}
+        </h3>
+    </div>
+</div>
+
+<div class="dictionarySection">
+    <div class="input">
+        <h1 class="dictionaryTitle"><b>Dictionary</b></h1>
+        <input type="string" class="search" placeholder="Look Up" ng-model="lookUp">
+
+        <button class="btn search" ng-click="findWord(lookUp)">Search</button>
+    </div>
+    
+<br>
+
+    <div class="numInfo">
+        <ul class="line"><b>Noun:</b>
+            <li> {{ output.meaning.noun }} </li> 
+        </ul>
+        <ul class="line"><b>Verb:</b> {{ output.meaning.verb }}</ul>
+        <ul class="line"><b>Adjective:</b> {{ output.meaning.adjective }}</ul>
+        <ul class="line"><b>Adverb:</b> {{ output.meaning.adverb }}</ul>
+        <ul class="line"><b>Examples:</b> {{ examp.example }}</ul>
+    </div>
+</div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="app.js"></script>
+
+</body>
+</html>
